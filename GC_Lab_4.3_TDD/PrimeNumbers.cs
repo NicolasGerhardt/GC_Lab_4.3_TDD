@@ -13,13 +13,6 @@ namespace GC_Lab_4._3_TDD
             // convert rank from human indexing to zero indexing
             rank--;
 
-            // check if list has that ranked prime in it
-            if (rank < primes.Count)
-            {
-                // return prime at that rank
-                return primes[rank];
-            }
-
             // build primes list up to rank
             for (int i = primes.Count - 1; i <= rank; i++)
             {
