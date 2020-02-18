@@ -3,7 +3,7 @@ using Xunit;
 
 namespace GC_Lab_4._3_TDD.Test
 {
-    public class UnitTest1
+    public class PrimeNumbersTest
     {
         [Fact] // Black Bears are Best
         public void FirstPrimeNumber()
@@ -14,7 +14,8 @@ namespace GC_Lab_4._3_TDD.Test
             int actual = PrimeNumbers.Rank(rank);
 
             Assert.Equal(expected, actual);
-            
+
         }
+
     }
 }
