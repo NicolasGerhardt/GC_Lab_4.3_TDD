@@ -18,7 +18,6 @@ namespace GC_Lab_4._3_TDD.Test
         }
 
         [Theory] // Bears, Beets, Battlestar Galactica
-        [InlineData(1, 2)]
         [InlineData(2, 3)]
         [InlineData(3, 5)]
         [InlineData(4, 7)]
@@ -29,6 +28,22 @@ namespace GC_Lab_4._3_TDD.Test
             int actual = PrimeNumbers.Rank(rank);
 
             Assert.Equal(expected, actual);
+
+        }
+
+        [Theory]
+        [InlineData(1)]
+        [InlineData(4)]
+        [InlineData(6)]
+        [InlineData(8)]
+        [InlineData(9)]
+        public void NumberIsNotPrime(int num)
+        {
+
+
+            bool actual = PrimeNumbers.IsPrime(num);
+
+            Assert.True
 
         }
 
