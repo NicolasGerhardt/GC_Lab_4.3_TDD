@@ -22,7 +22,7 @@ namespace GC_Lab_4._3_TDD.Test
         [InlineData(3, 5)]
         [InlineData(4, 7)]
         [InlineData(5, 11)]
-        public void TestPrimeNumbers(int rank, int expected)
+        public void FindPrimeNumbers(int rank, int expected)
         {
 
             int actual = PrimeNumbers.Rank(rank);
