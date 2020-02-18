@@ -52,5 +52,16 @@ namespace GC_Lab_4._3_TDD
 
 
         }
+
+        public static int Next(int number)
+        {
+            // Increase next canidate by 1
+            do
+            {
+                number++;
+            } while (!IsPrime(number));
+            // If prime return number
+            return number;
+        }
     }
 }

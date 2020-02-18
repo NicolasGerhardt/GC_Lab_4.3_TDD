@@ -68,10 +68,11 @@ namespace GC_Lab_4._3_TDD.Test
         [InlineData(3, 5)]
         [InlineData(5, 7)]
         [InlineData(7, 11)]
+        [InlineData(9, 11)]
         [InlineData(11, 13)]
-        public void FindNextPrimeNumber(int prime, int expected)
+        public void FindNextPrimeNumber(int number, int expected)
         {
-            int actual = PrimeNumbers.Next(prime);
+            int actual = PrimeNumbers.Next(number);
 
             Assert.Equal(expected, actual);
         }
