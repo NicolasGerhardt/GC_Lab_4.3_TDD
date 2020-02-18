@@ -38,6 +38,7 @@ namespace GC_Lab_4._3_TDD.Test
         [InlineData(6)]
         [InlineData(8)]
         [InlineData(9)]
+        [InlineData(198)]
         public void NumberIsNotPrime(int num)
         {
 
@@ -54,6 +55,7 @@ namespace GC_Lab_4._3_TDD.Test
         [InlineData(5)]
         [InlineData(7)]
         [InlineData(11)]
+        [InlineData(197)]
         public void NumberIsPrime(int num)
         {
 
