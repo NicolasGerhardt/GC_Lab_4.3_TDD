@@ -22,7 +22,7 @@ namespace GC_Lab_4._3_TDD.Test
         [InlineData(3, 5)]
         [InlineData(4, 7)]
         [InlineData(5, 11)]
-        public void FindPrimeNumbers(int rank, int expected)
+        public void FindPrimeNumberByRank(int rank, int expected)
         {
 
             int actual = PrimeNumbers.Rank(rank);
@@ -45,6 +45,35 @@ namespace GC_Lab_4._3_TDD.Test
 
             Assert.False(actual);
 
+        }
+
+        [Theory]
+        [InlineData(2)]
+        [InlineData(3)]
+        [InlineData(5)]
+        [InlineData(7)]
+        [InlineData(11)]
+        public void NumberIsPrime(int num)
+        {
+
+
+            bool actual = PrimeNumbers.IsPrime(num);
+
+            Assert.True(actual);
+
+        }
+
+        [Theory]
+        [InlineData(2, 3)]
+        [InlineData(3, 5)]
+        [InlineData(5, 7)]
+        [InlineData(7, 11)]
+        [InlineData(11, 13)]
+        public void FindNextPrimeNumber(int prime, int expected)
+        {
+            int actual = PrimeNumbers.Next(prime);
+
+            Assert.Equal(expected, actual);
         }
 
     }
