@@ -9,9 +9,27 @@ namespace GC_Lab_4._3_TDD
         private static List<int> primes = new List<int> { 2, 3 };
 
         public static int Rank(int rank)
-        { 
-            // convert human indexing to 
-            return primes[rank - 1];
+        {
+            // convert rank from human indexing to zero indexing
+            rank--;
+
+            // check if list has that ranked prime in it
+            if (rank < primes.Count)
+            {
+                // return prime at that rank
+                return primes[rank];
+            }
+
+            // build primes list up to rank
+            for (int i = primes.Count - 1; i <= rank; i++)
+            {
+                // get next prime
+                int nextPrime = Next(primes[i]);
+                // add to list
+                primes.Add(nextPrime);
+            }
+
+            return primes[rank];
         }
 
         public static bool IsPrime(int num)
