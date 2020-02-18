@@ -43,7 +43,7 @@ namespace GC_Lab_4._3_TDD.Test
 
             bool actual = PrimeNumbers.IsPrime(num);
 
-            Assert.True
+            Assert.False(actual);
 
         }
 
